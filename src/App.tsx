@@ -1,9 +1,10 @@
 function App() {
   return (
-    <div>
-      <div className="text-3xl font-bold tracking-widest capitalize">
-        welcome to codingdestro.dev
-      </div>
+    <div className="font-georgia">
+      <p className="text-3xl font-semibold text-center animate-fadezoomin">
+        mohd anas welcome to codingdestro.
+        <span className="text-ternary">dev</span>
+      </p>
     </div>
   )
 }
