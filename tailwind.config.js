@@ -39,9 +39,20 @@ export default {
             transform: "scale(1)",
           },
         },
+        fadeslideup: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         fadezoomin: "fadezoomin 0.4s forwards",
+        fadeslideup: "fadeslideup 0.8s ease-out forwards .4s",
       },
     },
   },
