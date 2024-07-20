@@ -9,7 +9,7 @@ const Navbar = () => {
   const selectSectionHandler = (idx = 0) => selectSection(idx)
 
   return (
-    <div className="fixed w-screen z-50">
+    <div className="fixed w-screen z-50 bg-white">
       <div className="flex justify-between items-center px-5 py-3 border border-b border-b-black">
         <div className="font-georgia md:text-lg text-md capitalize font-semibold">
           <a href="/">codingdestro</a>
