@@ -11,7 +11,7 @@ const About = () => {
       <div className="py-20">
         <div className="profile-card"></div>
       </div>
-      <div className="w-[380px] md:w-[600px] lg:w-[800px] font-poppins text-sm text-slate-500 ">
+      <div className="w-[300px] md:w-[600px] lg:w-[800px] font-poppins text-sm text-slate-500 ">
         <p>
           Greetings! I am Mohd Anas, a seasoned full-stack web developer with a
           penchant for crafting elegant and efficient web applications. Hailing
