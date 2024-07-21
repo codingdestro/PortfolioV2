@@ -1,12 +1,19 @@
-import React from "react"
+import React, { useRef } from "react"
 import { JsxElement } from "typescript"
 import Section from "../components/Section"
 
+import { useView } from "../hooks/useView"
+
 const About = () => {
+  const cardRef = useRef<HTMLDivElement>(null)
+  const { isVisible } = useView(cardRef)
   return (
     <Section heading="about me" id="about me">
       <div className="py-20">
-        <div className="profile-card"></div>
+        <div
+          className={`profile-card ${isVisible ? "animate-popup" : ""}`}
+          ref={cardRef}
+        ></div>
       </div>
       <div className="w-[300px] md:w-[600px] lg:w-[800px] font-poppins text-sm text-slate-500 ">
         <p>

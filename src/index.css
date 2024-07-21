@@ -16,26 +16,8 @@
   box-shadow: 0rem 0rem 0px #fc345c;
   background-image: url("/assets/profile-pic.jpg");
   transition: 0.5s;
-  animation: popup 0.5s forwards ease-out;
 }
-
-/* .profile-card:hover {
-  transform: translate(-2rem, -2rem);
-  box-shadow: 1rem 1rem 1px #fc345c;
-} */
 
 html {
   scroll-behavior: smooth;
-}
-
-@keyframes popup {
-  0% {
-    box-shadow: 0rem 0rem 0px #fc345c;
-    transform: translate(0rem, 0rem);
-  }
-
-  100% {
-    transform: translate(-1rem, -1rem);
-    box-shadow: 1rem 1rem 10px #fc345c;
-  }
 }

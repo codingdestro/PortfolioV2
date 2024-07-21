@@ -49,10 +49,22 @@ export default {
             transform: "translateY(0)",
           },
         },
+        popup: {
+          "0%": {
+            "box-shadow": "0rem 0rem 0px #fc345c",
+            transform: "translate(0rem, 0rem)",
+          },
+
+          "100%": {
+            transform: "translate(-1rem, -1rem)",
+            "box-shadow": "1rem 1rem 10px #fc345c",
+          },
+        },
       },
       animation: {
         fadezoomin: "fadezoomin 0.4s forwards",
         fadeslideup: "fadeslideup 0.8s ease-out forwards .4s",
+        popup: "popup 0.5s forwards ease-out .5s",
       },
     },
   },
