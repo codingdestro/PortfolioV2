@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useRef } from "react"
 import { serviceInterface } from "../../data/services"
+import { useView } from "../../hooks/useView"
 
 const ServiceCard = ({ name, price, features }: serviceInterface) => {
+  const carRef = useRef<HTMLDivElement>(null)
+  const { isVisible } = useView(carRef)
   return (
-    <div className="flex flex-col items-center py-10 justify-between border rounded-lg w-[18rem] min-h-[25rem] shadow-lg animate-fadezoomin">
+    <div
+      ref={carRef}
+      className={`flex flex-col items-center py-10 justify-between border rounded-lg w-[18rem] min-h-[25rem] shadow-lg ${isVisible ? "animate-fadezoomin" : ""}`}
+    >
       <div className="flex flex-col gap-y-5 items-center">
         <div className="font-georgia font-bold text-xl capitalize">{name}</div>
 

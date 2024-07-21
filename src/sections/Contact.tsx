@@ -12,9 +12,21 @@ const Contact = () => {
       </div>
 
       <div className="flex justify-center gap-5 font-poppins text-sm font-[400]">
-        <a className="px-5 py-1 border rounded-full">twitter</a>
-        <a className="px-5 py-1 border rounded-full">Github</a>
-        <a className="px-5 py-1 border rounded-full">LinkedIn</a>
+        <a href="/" className="px-5 py-1 border rounded-full">
+          twitter
+        </a>
+        <a
+          href="https://github.com/codingdestro"
+          className="px-5 py-1 border rounded-full"
+        >
+          Github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mohd-anas-608225255/"
+          className="px-5 py-1 border rounded-full"
+        >
+          LinkedIn
+        </a>
       </div>
 
       <div className="text-center ">
@@ -25,7 +37,7 @@ const Contact = () => {
           Designer, Developer & Lover
         </p>
       </div>
-      <div className="px-3 max-w-[400px] font-serif text-slg md:sm text-center">
+      <div className="px-3 max-w-[400px] font-serif text-smd md:sm text-center">
         I'm always excited to connect with like-minded professionals and
         potential collaborators. Whether you have a project in mind, need
         assistance, or just want to say hello, feel free to reach out!

@@ -9,9 +9,8 @@ export const services: serviceInterface[] = [
     price: "5$/Hour",
     features: [
       "Basic Html, Css & Javascript",
-      "Basic Html, Css & Javascript",
-      "Basic Html, Css & Javascript",
-      "Basic Html, Css & Javascript",
+      "Landing Page Design",
+      "Project update",
     ],
   },
 
@@ -23,10 +22,11 @@ export const services: serviceInterface[] = [
 
   {
     name: "Professional",
-    price: "5$/Hour",
+    price: "12$/Hour",
     features: [
       "Building full stack web app",
       "Next.js, Drizzle ORM, Postgresql",
+      "Deployment with CI/CD on AWS, Vercel",
     ],
   },
 ]
