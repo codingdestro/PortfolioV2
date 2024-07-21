@@ -1,13 +1,10 @@
 import React from "react"
+import { JsxElement } from "typescript"
+import Section from "../components/Section"
 
 const About = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center">
-      <div className="self-start">
-        <h1 className="font-georgia px-4 text-xl md:text-3xl font-semibold border-b-2 border-b-ternary capitalize tracking-wider">
-          about me
-        </h1>
-      </div>
+    <Section heading="about me" id="about me">
       <div className="py-20">
         <div className="profile-card"></div>
       </div>
@@ -26,7 +23,7 @@ const About = () => {
           base.
         </p>
       </div>
-    </div>
+    </Section>
   )
 }
 

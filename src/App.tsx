@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import About from "./sections/About"
 import Hero from "./sections/Hero"
+import Projects from "./sections/Projects"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className=" flex flex-col items-center px-5 md:w-[890px]">
           <Hero />
           <About />
+          <Projects />
         </div>
       </div>
     </div>

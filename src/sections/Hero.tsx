@@ -2,7 +2,10 @@ import React from "react"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center h-screen justify-center">
+    <section
+      id="home"
+      className="flex flex-col items-center h-screen justify-center"
+    >
       <div className="flex flex-col items-center gap-4 animate-fadezoomin">
         <div className="font-georgia text-4xl">It's Mohd Anas</div>
 
@@ -20,7 +23,7 @@ const Hero = () => {
           download resume
         </button>
       </div>
-    </div>
+    </section>
   )
 }
 
