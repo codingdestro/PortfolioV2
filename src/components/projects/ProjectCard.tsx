@@ -10,7 +10,7 @@ const ProjectCard = (props: PropjectInterface) => {
   return (
     <div
       ref={cardRef}
-      className={`border p-5 rounded-lg shadow-lg w-[330px] flex flex-col gap-5 ${isVisible ? "animate-fadeslideup" : "opacity-0"} opacity-0`}
+      className={`border p-5 rounded-lg shadow-lg w-[330px] flex flex-col gap-5 ${isVisible ? "animate-fadeslideup-5" : "opacity-0"} opacity-0`}
     >
       <div
         className="rounded-lg self-center  h-40 w-72 border shadow-md overflow-hidden bg-center bg-cover bg-no-repeat"
