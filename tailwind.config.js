@@ -63,7 +63,9 @@ export default {
       },
       animation: {
         fadezoomin: "fadezoomin 0.4s forwards",
-        fadeslideup: "fadeslideup 0.8s ease-out forwards .4s",
+        "fadezoomin-5": "fadezoomin 0.4s forwards .5s",
+        "fadeslideup-5": "fadeslideup 0.8s ease-out forwards .5s ",
+        fadeslideup: "fadeslideup 0.8s ease-out forwards",
         popup: "popup 0.5s forwards ease-out .5s",
       },
     },
