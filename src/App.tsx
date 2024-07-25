@@ -7,7 +7,6 @@ import Projects from "./sections/Projects"
 import Services from "./sections/Services"
 
 function App() {
-  console.log(import.meta.env.VITE_GITHUB_USERNAME)
   return (
     <div>
       <Navbar />
