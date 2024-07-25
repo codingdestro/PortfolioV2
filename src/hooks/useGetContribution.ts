@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-const GITHUB_TOKEN = "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"
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
 const createQuery = (year: number) => {
@@ -40,7 +39,7 @@ const fetchGithubData = async (year: number) => {
       { query },
       {
         headers: {
-          Authorization: `Bearer ${GITHUB_TOKEN}`,
+          Authorization: `Bearer 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`,
           "Content-Type": "application/json",
         },
       },
