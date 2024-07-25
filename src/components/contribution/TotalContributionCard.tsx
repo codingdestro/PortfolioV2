@@ -11,10 +11,8 @@ const TotalContributionCard = () => {
 
   useEffect(() => {
     ; (async () => {
-      // const token = "ghp_nEexjtniZCAIsKNbsrNhjKIVRCpMC72GO8"
       const url = `https://api.github.com/users/codingdestro/repos`
       const { data } = await axios.get(url)
-      console.log(data.length)
       if (Array.isArray(data)) setRepoCount(data.length)
     })()
   }, [])
