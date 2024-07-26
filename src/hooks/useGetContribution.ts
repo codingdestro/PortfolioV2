@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN
+const GITHUB_TOKEN: string = import.meta.env.VITE_GITHUB_TOKEN || ""
 
 const createQuery = (year: number) => {
   const from = new Date(year, 0, 1).toISOString()
@@ -10,21 +10,12 @@ const createQuery = (year: number) => {
 
   const query = `
 query {
-  user(login: "${import.meta.env.VITE_GITHUB_USERNAME}") {
+  user(login: "codingdestro") {
     name
     contributionsCollection(from: "${from}", to: "${to}") {
       contributionCalendar {
         colors
         totalContributions
-        weeks {
-          contributionDays {
-            color
-            contributionCount
-            date
-            weekday
-          }
-          firstDay
-        }
       }
     }
   }
