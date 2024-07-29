@@ -8,13 +8,13 @@
   width: 240px;
   height: 290px;
   border-radius: 5px;
-  /* @apply border; */
+  @apply border border-slate-300;
   background-position: center;
   background-size: cover;
   position: relative;
   background-color: white;
   box-shadow: 0rem 0rem 0px #fc345c;
-  background-image: url("/assets/profile-pic.jpg");
+  background-image: url("/assets/mypic.png");
   transition: 0.5s;
 }
 
