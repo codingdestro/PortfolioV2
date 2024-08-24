@@ -2,11 +2,12 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
-const GITHUB_TOKEN: string = import.meta.env.VITE_GITHUB_TOKEN || ""
+const GITHUB_TOKEN: string = process.env.VITE_GITHUB_TOKEN || ""
 
 const createQuery = (year: number) => {
   const from = new Date(year, 0, 1).toISOString()
   const to = new Date(year, 11, 31).toISOString()
+  console.log(GITHUB_TOKEN)
 
   const query = `
 query {
