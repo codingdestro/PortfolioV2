@@ -34,7 +34,7 @@ export default function Page({
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center">
+      <div className="flex justify-center dark dark:bg-black">
         <div className=" flex flex-col items-center px-5 md:w-[890px]">
           <Hero />
           <About />
