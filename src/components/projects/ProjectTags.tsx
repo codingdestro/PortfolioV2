@@ -6,7 +6,7 @@ const ProjectTags = ({ tags }: { tags: string[] }) => {
         .map((tag: string, idx: number) => (
           <p
             key={idx}
-            className="text-sm  font-poppins px-2 py-1 rounded-md border border-ternary"
+            className="text-sm  font-poppins px-2 py-1 rounded-md bg-ternary"
           >
             {tag}
           </p>
