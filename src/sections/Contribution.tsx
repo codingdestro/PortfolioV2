@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Section from "../components/Section"
 import LanguagesCard from "../components/contribution/LanguageCard"
 import TotalContributionCard from "../components/contribution/TotalContributionCard"

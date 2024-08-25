@@ -17,11 +17,11 @@ const HamburgerMenu = () => {
       <div
         className={`${show ? "fixed" : "hidden"} animate-fadezoomin w-full md:hidden h-screen left-0 top-0 flex items-center justify-center bg-primary `}
       >
-        <div className={`flex-col gap-5 flex invert`}>
+        <div className={`flex-col gap-5 flex`}>
           {sections.map((section: string, idx: number) => (
             <div
               key={idx}
-              className="border active:bg-primary active:text-white border-primary flex justify-center text-center rounded-md"
+              className="border dark:bg-white dark:text-black active:bg-primary active:text-white border-primary flex justify-center text-center rounded-md"
             >
               <a
                 href={"#" + section}

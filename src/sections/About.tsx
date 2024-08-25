@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import { JsxElement } from "typescript"
 import Section from "../components/Section"
 
 import { useView } from "../hooks/useView"

@@ -1,7 +1,5 @@
-import { useState, useEffect, useRef } from "react"
-import axios from "axios"
+import { useRef } from "react"
 import { useView } from "../../hooks/useView"
-import { useGetContribution } from "../../hooks/useGetContribution"
 
 import type { Repo } from "../../pages"
 
@@ -28,7 +26,7 @@ const TotalContributionCard = ({ repoCount, contributions }: Repo) => {
           </p>
         </div>
 
-        <div className="border border-black h-[10rem]"></div>
+        <div className="border border-black dark:border-white h-[10rem]"></div>
 
         <div className="text-center flex-1">
           <h4 className="text-xxl text-ternary font-bold tracking-wider">
