@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import { JsxElement } from "typescript"
 import Section from "../components/Section"
 
 import { useView } from "../hooks/useView"
@@ -15,7 +14,7 @@ const About = () => {
           ref={cardRef}
         ></div>
       </div>
-      <div className="w-[300px] md:w-[600px] lg:w-[800px] font-poppins text-sm text-slate-500 ">
+      <div className="w-[300px] md:w-[600px] lg:w-[800px] font-poppins text-sm text-slate-500 dark:text-white">
         <p>
           Greetings! I am Mohd Anas, a seasoned full-stack web developer with a
           penchant for crafting elegant and efficient web applications. Hailing

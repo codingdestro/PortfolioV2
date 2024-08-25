@@ -9,8 +9,8 @@ const Navbar = () => {
   const selectSectionHandler = (idx = 0) => selectSection(idx)
 
   return (
-    <div className="fixed w-screen z-50 bg-white">
-      <div className="flex justify-between items-center px-5 py-3 border border-b border-b-black">
+    <div className="fixed w-screen z-50 bg-white dark:bg-black dark:text-white dark">
+      <div className="flex justify-between items-center px-5 py-3 border-b border-b-black dark:border-b-white">
         <div className="font-georgia md:text-lg text-md capitalize font-semibold">
           <a href="/">codingdestro</a>
         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="hidden md:block font-poppins font-[500]">
-          <button className="border px-3 py-1 m-0 rounded-md bg-ternary text-white hover:bg-white hover:text-black transition-colors duration-200 shadow-md">
+          <button className="px-3 py-1 m-0 rounded-md bg-ternary text-white hover:bg-white hover:text-black transition-colors duration-200 shadow-md">
             contact me
           </button>
         </div>

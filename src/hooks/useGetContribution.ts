@@ -1,8 +1,7 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
 
 const GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
-const GITHUB_TOKEN: string = import.meta.env.VITE_GITHUB_TOKEN || ""
+const GITHUB_TOKEN: string = process.env.VITE_GITHUB_TOKEN || ""
 
 const createQuery = (year: number) => {
   const from = new Date(year, 0, 1).toISOString()
@@ -47,19 +46,10 @@ const fetchGithubData = async (year: number) => {
   return 0
 }
 
-export const useGetContribution = () => {
-  const [isLoading, setLoading] = useState(false)
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    ; (async function() {
-      setLoading(true)
-      let totalContributions = 0
-      for (let year = 2022; year <= new Date().getFullYear(); year++) {
-        totalContributions += await fetchGithubData(year)
-      }
-      setCount(totalContributions)
-      setLoading(false)
-    })()
-  }, [])
-  return { count, isLoading }
+export const useGetContribution = async () => {
+  let totalContributions = 0
+  for (let year = 2022; year <= new Date().getFullYear(); year++) {
+    totalContributions += await fetchGithubData(year)
+  }
+  return { totalContributions }
 }

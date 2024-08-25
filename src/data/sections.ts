@@ -1,3 +1,3 @@
-const sections = ["home", "about me", "projects", "contribution", "services"]
+const sections = ["home", "about me", "projects", "contribution"]
 
 export default sections
