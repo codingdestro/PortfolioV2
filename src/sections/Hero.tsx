@@ -21,9 +21,15 @@ const Hero = () => {
           elegant and efficient web applications.
         </p>
 
-        <button className="mt-5 bg-primary dark:bg-white text-white dark:text-black px-3 py-2 rounded-lg animate-fadezoomin text-sm font-poppins font-[500] capitalize delay-200">
-          download resume
-        </button>
+        <div className="flex items-center gap-x-5">
+          <button className="mt-5 bg-primary dark:bg-white text-white dark:text-black px-3 py-2 rounded-lg animate-fadezoomin text-sm font-poppins font-[500] capitalize delay-200">
+            download resume
+          </button>
+
+          <button className="mt-5 bg-ternary text-white px-3 py-2 rounded-lg animate-fadezoomin text-sm font-poppins font-[500] capitalize delay-200">
+            contact me!
+          </button>
+        </div>
       </div>
     </section>
   )

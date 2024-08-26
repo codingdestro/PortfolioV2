@@ -7,6 +7,9 @@ import Hero from "../sections/Hero"
 import Projects from "../sections/Projects"
 import { InferGetStaticPropsType, GetStaticProps } from "next"
 import { useGetContribution } from "../hooks/useGetContribution"
+import { ReactNode, useState } from "react"
+import ToggleThemeButton from "../components/ToggleThemeButton"
+import Main from "../components/Main"
 
 export type Repo = {
   repoCount: number
@@ -32,9 +35,8 @@ export default function Page({
   repo,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div>
-      <Navbar />
-      <div className="flex justify-center dark dark:bg-black">
+    <Main>
+      <div className="flex justify-center  dark:bg-black">
         <div className=" flex flex-col items-center px-5 md:w-[890px]">
           <Hero />
           <About />
@@ -46,6 +48,6 @@ export default function Page({
         </div>
       </div>
       <Contact />
-    </div>
+    </Main>
   )
 }

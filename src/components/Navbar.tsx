@@ -1,19 +1,42 @@
-import { useState } from "react"
+"use client"
+import { RefObject, useEffect, useState } from "react"
 import sections from "../data/sections"
 
 import HamburgerMenu from "./HamburgerMenu"
+import ToggleThemeButton from "./ToggleThemeButton"
+type Props = {
+  obj: RefObject<HTMLDivElement>
+}
 
-const Navbar = () => {
+const Navbar = ({ obj }: Props) => {
   const [selectedSection, selectSection] = useState(0)
 
   const selectSectionHandler = (idx = 0) => selectSection(idx)
+  const [isDark, setDark] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.theme === "dark") {
+      obj.current?.classList.add("dark")
+      setDark(true)
+    } else {
+      obj.current?.classList.remove("dark")
+      setDark(false)
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    let done = obj.current?.classList.toggle("dark")
+    localStorage.setItem("theme", done ? "dark" : "")
+    setDark(done!)
+  }
 
   return (
-    <div className="fixed w-screen z-50 bg-white dark:bg-black dark:text-white dark">
+    <div className="fixed w-screen z-50 bg-white dark:bg-black dark:text-white">
       <div className="flex justify-between items-center px-5 py-3 border-b border-b-black dark:border-b-white">
         <div className="font-georgia md:text-lg text-md capitalize font-semibold">
           <a href="/">codingdestro</a>
         </div>
+
         <div>
           <HamburgerMenu />
           <ul className="md:flex gap-3 items-center hidden text-sm font-[500]">
@@ -31,12 +54,11 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+
+            <button onClick={toggleTheme}>
+              <ToggleThemeButton dark={isDark} />
+            </button>
           </ul>
-        </div>
-        <div className="hidden md:block font-poppins font-[500]">
-          <button className="px-3 py-1 m-0 rounded-md bg-ternary text-white hover:bg-white hover:text-black transition-colors duration-200 shadow-md">
-            contact me
-          </button>
         </div>
       </div>
     </div>
