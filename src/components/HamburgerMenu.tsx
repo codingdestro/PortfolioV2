@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
         <img src={`/assets/menu.png`} width={20} height={3} />
       </button>
       <div
-        className={`${show ? "fixed" : "hidden"} animate-fadezoomin w-full md:hidden h-screen left-0 top-0 flex items-center justify-center bg-primary `}
+        className={`${show ? "fixed" : "hidden"} animate-fadezoomin w-full md:hidden h-screen left-0 top-0 flex items-center justify-center bg-white dark:bg-primary `}
       >
         <div className={`flex-col gap-5 flex`}>
           {sections.map((section: string, idx: number) => (

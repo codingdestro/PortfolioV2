@@ -2,7 +2,7 @@ import React from "react"
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center gap-8 dark dark:bg-black py-10">
+    <div className="flex flex-col items-center gap-8 dark:bg-black py-10">
       <div className="flex flex-col items-center gap-5">
         <h3 className="font-georgia text-primary text-lg dark:text-white">
           want to collaborate?
